@@ -1,0 +1,830 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		339D60A31B31BE4100DFBA26 /* Photo-Inpaint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 339D60A41B31BE4100DFBA26 /* Build configuration list for PBXAggregateTarget "Photo-Inpaint" */;
+			buildPhases = (
+				339D60A71B31BE6900DFBA26 /* ShellScript */,
+			);
+			dependencies = (
+				339D60A91B31BE7000DFBA26 /* PBXTargetDependency */,
+			);
+			name = "Photo-Inpaint";
+			productName = "Photo-Inpaint";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		184BA4ED28011F710090CC95 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4EC28011F710090CC95 /* opencv2.framework */; };
+		184BA4F1280121800090CC95 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4F0280121800090CC95 /* AppKit.framework */; };
+		184BA4F32801218A0090CC95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4F22801218A0090CC95 /* AVFoundation.framework */; };
+		184BA4F5280121930090CC95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4F4280121930090CC95 /* Cocoa.framework */; };
+		184BA4F72801219E0090CC95 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4F62801219E0090CC95 /* CoreFoundation.framework */; };
+		184BA4F9280121A80090CC95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4F8280121A80090CC95 /* CoreGraphics.framework */; };
+		184BA4FB280121B20090CC95 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4FA280121B20090CC95 /* CoreImage.framework */; };
+		184BA4FD280121BB0090CC95 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4FC280121BA0090CC95 /* CoreMedia.framework */; };
+		184BA4FF280121C90090CC95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA4FE280121C90090CC95 /* QuartzCore.framework */; };
+		184BA501280121D00090CC95 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA500280121D00090CC95 /* Accelerate.framework */; };
+		184BA503280121DA0090CC95 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA502280121DA0090CC95 /* OpenCL.framework */; };
+		184BA505280121E50090CC95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA504280121E50090CC95 /* Foundation.framework */; };
+		184BA507280121EF0090CC95 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BA506280121EF0090CC95 /* CoreVideo.framework */; };
+		330908751B3D93F60062D279 /* PIDataViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 330908731B3D93F60062D279 /* PIDataViewCtrl.m */; };
+		330908761B3D93F60062D279 /* PIDataViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330908741B3D93F60062D279 /* PIDataViewCtrl.xib */; };
+		3309087A1B3D94D10062D279 /* ATPopupWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 330908791B3D94D10062D279 /* ATPopupWindow.m */; };
+		3309087D1B3D94E70062D279 /* LRHMPopupBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3309087C1B3D94E70062D279 /* LRHMPopupBorderView.m */; };
+		331CEA751B418A9400581952 /* NSImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 331CEA741B418A9400581952 /* NSImage+OpenCV.mm */; };
+		332A1C6B1B442CDF005F4B33 /* PIProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 332A1C6A1B442CDF005F4B33 /* PIProgressView.m */; };
+		332A1C6E1B442EC6005F4B33 /* PIProgressViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 332A1C6D1B442EC6005F4B33 /* PIProgressViewCtrl.m */; };
+		332A1C701B442EDD005F4B33 /* PIProgressViewCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332A1C6F1B442EDD005F4B33 /* PIProgressViewCtrl.xib */; };
+		332A1C771B443B2A005F4B33 /* PIRedoUndoMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 332A1C761B443B2A005F4B33 /* PIRedoUndoMgr.m */; };
+		3341462E1B4AB07400F9DA6C /* NSButton+TextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3341462D1B4AB07400F9DA6C /* NSButton+TextColor.m */; };
+		334146331B4AB22B00F9DA6C /* leadPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 334146301B4AB22B00F9DA6C /* leadPhoto.png */; };
+		334146341B4AB22B00F9DA6C /* meta.png in Resources */ = {isa = PBXBuildFile; fileRef = 334146311B4AB22B00F9DA6C /* meta.png */; };
+		334146351B4AB22B00F9DA6C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 334146321B4AB22B00F9DA6C /* start.png */; };
+		334146371B4AC2E200F9DA6C /* photo inpaint.icns in Resources */ = {isa = PBXBuildFile; fileRef = 334146361B4AC2E200F9DA6C /* photo inpaint.icns */; };
+		336819221B399CB700069A60 /* LRHMSideBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368191F1B399CB700069A60 /* LRHMSideBarItem.m */; };
+		336819231B399CB700069A60 /* LRHMTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336819211B399CB700069A60 /* LRHMTitleView.m */; };
+		336819271B39A1CE00069A60 /* LRHMSideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 336819261B39A1CE00069A60 /* LRHMSideBar.m */; };
+		3368192B1B39A32E00069A60 /* PIContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368192A1B39A32E00069A60 /* PIContentView.m */; };
+		336819311B39A3AC00069A60 /* PIBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 336819301B39A3AC00069A60 /* PIBottomView.m */; };
+		336819391B39A68E00069A60 /* brush.png in Resources */ = {isa = PBXBuildFile; fileRef = 336819351B39A68E00069A60 /* brush.png */; };
+		3368193A1B39A68E00069A60 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 336819361B39A68E00069A60 /* redo.png */; };
+		3368193B1B39A68E00069A60 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 336819371B39A68E00069A60 /* save.png */; };
+		3368193C1B39A68E00069A60 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = 336819381B39A68E00069A60 /* undo.png */; };
+		336819401B39B2AF00069A60 /* PIImageDataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 3368193F1B39B2AF00069A60 /* PIImageDataMgr.m */; };
+		339D60871B31BDF800DFBA26 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 339D60861B31BDF800DFBA26 /* AppDelegate.mm */; };
+		339D60891B31BDF800DFBA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 339D60881B31BDF800DFBA26 /* main.m */; };
+		339D608B1B31BDF800DFBA26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339D608A1B31BDF800DFBA26 /* Images.xcassets */; };
+		339D608E1B31BDF800DFBA26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339D608C1B31BDF800DFBA26 /* MainMenu.xib */; };
+		339D60BE1B31BF7400DFBA26 /* criminisi_inpainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339D60AC1B31BF7400DFBA26 /* criminisi_inpainter.cpp */; };
+		339D60C01B31BF7400DFBA26 /* mean_shift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339D60B11B31BF7400DFBA26 /* mean_shift.cpp */; };
+		339D60C21B31BF7400DFBA26 /* patch_match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339D60B41B31BF7400DFBA26 /* patch_match.cpp */; };
+		339D60C41B31BF7400DFBA26 /* pyramid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339D60B81B31BF7400DFBA26 /* pyramid.cpp */; };
+		339D60C51B31BF7400DFBA26 /* template_match_candidates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 339D60BB1B31BF7400DFBA26 /* template_match_candidates.cpp */; };
+		B481A3711B43C14400CF74E1 /* PIContentPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = B481A3701B43C14400CF74E1 /* PIContentPathView.m */; };
+		B4C271071B42283D005BDAEC /* PIAffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C271061B42283D005BDAEC /* PIAffineTransform.m */; };
+		B4C2710B1B4239FC005BDAEC /* PIInpaint.mm in Sources */ = {isa = PBXBuildFile; fileRef = B4C2710A1B4239FC005BDAEC /* PIInpaint.mm */; };
+		B4EEEEA61B43EB640008F139 /* PCOutImageFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEEEA21B43EB640008F139 /* PCOutImageFormat.m */; };
+		B4EEEEA71B43EB640008F139 /* PCOutImageFormat.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EEEEA31B43EB640008F139 /* PCOutImageFormat.xib */; };
+		B4EEEEA81B43EB640008F139 /* PCOutImageFormatCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EEEEA51B43EB640008F139 /* PCOutImageFormatCtrl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		339D60A81B31BE7000DFBA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 339D60781B31BDF800DFBA26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 339D607F1B31BDF800DFBA26;
+			remoteInfo = "Photo Inpaint";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B40C83BA1B42805500AA33DA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		184BA4EC28011F710090CC95 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../opencv2.framework; sourceTree = "<group>"; };
+		184BA4F0280121800090CC95 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		184BA4F22801218A0090CC95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		184BA4F4280121930090CC95 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		184BA4F62801219E0090CC95 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		184BA4F8280121A80090CC95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		184BA4FA280121B20090CC95 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		184BA4FC280121BA0090CC95 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		184BA4FE280121C90090CC95 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		184BA500280121D00090CC95 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		184BA502280121DA0090CC95 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		184BA504280121E50090CC95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		184BA506280121EF0090CC95 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		330908721B3D93F60062D279 /* PIDataViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIDataViewCtrl.h; sourceTree = "<group>"; };
+		330908731B3D93F60062D279 /* PIDataViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIDataViewCtrl.m; sourceTree = "<group>"; };
+		330908741B3D93F60062D279 /* PIDataViewCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIDataViewCtrl.xib; sourceTree = "<group>"; };
+		330908781B3D94D10062D279 /* ATPopupWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPopupWindow.h; sourceTree = "<group>"; };
+		330908791B3D94D10062D279 /* ATPopupWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPopupWindow.m; sourceTree = "<group>"; };
+		3309087B1B3D94E70062D279 /* LRHMPopupBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRHMPopupBorderView.h; sourceTree = "<group>"; };
+		3309087C1B3D94E70062D279 /* LRHMPopupBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRHMPopupBorderView.m; sourceTree = "<group>"; };
+		331CEA731B418A9400581952 /* NSImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+OpenCV.h"; sourceTree = "<group>"; };
+		331CEA741B418A9400581952 /* NSImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSImage+OpenCV.mm"; sourceTree = "<group>"; };
+		332A1C691B442CDF005F4B33 /* PIProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIProgressView.h; sourceTree = "<group>"; };
+		332A1C6A1B442CDF005F4B33 /* PIProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIProgressView.m; sourceTree = "<group>"; };
+		332A1C6C1B442EC6005F4B33 /* PIProgressViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIProgressViewCtrl.h; sourceTree = "<group>"; };
+		332A1C6D1B442EC6005F4B33 /* PIProgressViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIProgressViewCtrl.m; sourceTree = "<group>"; };
+		332A1C6F1B442EDD005F4B33 /* PIProgressViewCtrl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PIProgressViewCtrl.xib; sourceTree = "<group>"; };
+		332A1C751B443B2A005F4B33 /* PIRedoUndoMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIRedoUndoMgr.h; sourceTree = "<group>"; };
+		332A1C761B443B2A005F4B33 /* PIRedoUndoMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIRedoUndoMgr.m; sourceTree = "<group>"; };
+		332A1C781B444486005F4B33 /* Photo Inpaint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Photo Inpaint.entitlements"; sourceTree = "<group>"; };
+		3341462C1B4AB07400F9DA6C /* NSButton+TextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+TextColor.h"; sourceTree = "<group>"; };
+		3341462D1B4AB07400F9DA6C /* NSButton+TextColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+TextColor.m"; sourceTree = "<group>"; };
+		334146301B4AB22B00F9DA6C /* leadPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leadPhoto.png; path = Resource/leadPhoto.png; sourceTree = "<group>"; };
+		334146311B4AB22B00F9DA6C /* meta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meta.png; path = Resource/meta.png; sourceTree = "<group>"; };
+		334146321B4AB22B00F9DA6C /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start.png; path = Resource/start.png; sourceTree = "<group>"; };
+		334146361B4AC2E200F9DA6C /* photo inpaint.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "photo inpaint.icns"; path = "Resource/photo inpaint.icns"; sourceTree = "<group>"; };
+		3368191E1B399CB700069A60 /* LRHMSideBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRHMSideBarItem.h; path = LRHMSideBarItem/LRHMSideBarItem.h; sourceTree = "<group>"; };
+		3368191F1B399CB700069A60 /* LRHMSideBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRHMSideBarItem.m; path = LRHMSideBarItem/LRHMSideBarItem.m; sourceTree = "<group>"; };
+		336819201B399CB700069A60 /* LRHMTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRHMTitleView.h; path = LRHMSideBarItem/LRHMTitleView.h; sourceTree = "<group>"; };
+		336819211B399CB700069A60 /* LRHMTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRHMTitleView.m; path = LRHMSideBarItem/LRHMTitleView.m; sourceTree = "<group>"; };
+		336819251B39A1CE00069A60 /* LRHMSideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRHMSideBar.h; path = LRHMSideBarItem/LRHMSideBar.h; sourceTree = "<group>"; };
+		336819261B39A1CE00069A60 /* LRHMSideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRHMSideBar.m; path = LRHMSideBarItem/LRHMSideBar.m; sourceTree = "<group>"; };
+		336819291B39A32E00069A60 /* PIContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIContentView.h; sourceTree = "<group>"; };
+		3368192A1B39A32E00069A60 /* PIContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIContentView.m; sourceTree = "<group>"; };
+		3368192F1B39A3AC00069A60 /* PIBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIBottomView.h; sourceTree = "<group>"; };
+		336819301B39A3AC00069A60 /* PIBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIBottomView.m; sourceTree = "<group>"; };
+		336819351B39A68E00069A60 /* brush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brush.png; path = Resource/brush.png; sourceTree = "<group>"; };
+		336819361B39A68E00069A60 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redo.png; path = Resource/redo.png; sourceTree = "<group>"; };
+		336819371B39A68E00069A60 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = Resource/save.png; sourceTree = "<group>"; };
+		336819381B39A68E00069A60 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = undo.png; path = Resource/undo.png; sourceTree = "<group>"; };
+		3368193E1B39B2AF00069A60 /* PIImageDataMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIImageDataMgr.h; sourceTree = "<group>"; };
+		3368193F1B39B2AF00069A60 /* PIImageDataMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIImageDataMgr.m; sourceTree = "<group>"; };
+		339D60801B31BDF800DFBA26 /* Easy photo inpaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy photo inpaint.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		339D60841B31BDF800DFBA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		339D60851B31BDF800DFBA26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		339D60861B31BDF800DFBA26 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		339D60881B31BDF800DFBA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		339D608A1B31BDF800DFBA26 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		339D608D1B31BDF800DFBA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		339D60981B31BDF800DFBA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		339D60991B31BDF800DFBA26 /* Photo_InpaintTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo_InpaintTests.m; sourceTree = "<group>"; };
+		339D60AB1B31BF7400DFBA26 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = catch.hpp; path = criminisi/catch.hpp; sourceTree = "<group>"; };
+		339D60AC1B31BF7400DFBA26 /* criminisi_inpainter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = criminisi_inpainter.cpp; path = criminisi/criminisi_inpainter.cpp; sourceTree = "<group>"; };
+		339D60AD1B31BF7400DFBA26 /* criminisi_inpainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = criminisi_inpainter.h; path = criminisi/criminisi_inpainter.h; sourceTree = "<group>"; };
+		339D60AE1B31BF7400DFBA26 /* gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gradient.h; path = criminisi/gradient.h; sourceTree = "<group>"; };
+		339D60B01B31BF7400DFBA26 /* integral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = integral.h; path = criminisi/integral.h; sourceTree = "<group>"; };
+		339D60B11B31BF7400DFBA26 /* mean_shift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mean_shift.cpp; path = criminisi/mean_shift.cpp; sourceTree = "<group>"; };
+		339D60B21B31BF7400DFBA26 /* mean_shift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mean_shift.h; path = criminisi/mean_shift.h; sourceTree = "<group>"; };
+		339D60B41B31BF7400DFBA26 /* patch_match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = patch_match.cpp; path = criminisi/patch_match.cpp; sourceTree = "<group>"; };
+		339D60B51B31BF7400DFBA26 /* patch_match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = patch_match.h; path = criminisi/patch_match.h; sourceTree = "<group>"; };
+		339D60B71B31BF7400DFBA26 /* patch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = patch.h; path = criminisi/patch.h; sourceTree = "<group>"; };
+		339D60B81B31BF7400DFBA26 /* pyramid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pyramid.cpp; path = criminisi/pyramid.cpp; sourceTree = "<group>"; };
+		339D60B91B31BF7400DFBA26 /* pyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pyramid.h; path = criminisi/pyramid.h; sourceTree = "<group>"; };
+		339D60BA1B31BF7400DFBA26 /* stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stats.h; path = criminisi/stats.h; sourceTree = "<group>"; };
+		339D60BB1B31BF7400DFBA26 /* template_match_candidates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = template_match_candidates.cpp; path = criminisi/template_match_candidates.cpp; sourceTree = "<group>"; };
+		339D60BC1B31BF7400DFBA26 /* template_match_candidates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = template_match_candidates.h; path = criminisi/template_match_candidates.h; sourceTree = "<group>"; };
+		339D60BD1B31BF7400DFBA26 /* timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timer.h; path = criminisi/timer.h; sourceTree = "<group>"; };
+		B481A36F1B43C14400CF74E1 /* PIContentPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIContentPathView.h; sourceTree = "<group>"; };
+		B481A3701B43C14400CF74E1 /* PIContentPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIContentPathView.m; sourceTree = "<group>"; };
+		B4C271051B42283D005BDAEC /* PIAffineTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIAffineTransform.h; sourceTree = "<group>"; };
+		B4C271061B42283D005BDAEC /* PIAffineTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIAffineTransform.m; sourceTree = "<group>"; };
+		B4C271091B4239FC005BDAEC /* PIInpaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIInpaint.h; sourceTree = "<group>"; };
+		B4C2710A1B4239FC005BDAEC /* PIInpaint.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PIInpaint.mm; sourceTree = "<group>"; };
+		B4EEEEA11B43EB640008F139 /* PCOutImageFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCOutImageFormat.h; sourceTree = "<group>"; };
+		B4EEEEA21B43EB640008F139 /* PCOutImageFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCOutImageFormat.m; sourceTree = "<group>"; };
+		B4EEEEA31B43EB640008F139 /* PCOutImageFormat.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCOutImageFormat.xib; sourceTree = "<group>"; };
+		B4EEEEA41B43EB640008F139 /* PCOutImageFormatCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCOutImageFormatCtrl.h; sourceTree = "<group>"; };
+		B4EEEEA51B43EB640008F139 /* PCOutImageFormatCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCOutImageFormatCtrl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		339D607D1B31BDF800DFBA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184BA507280121EF0090CC95 /* CoreVideo.framework in Frameworks */,
+				184BA505280121E50090CC95 /* Foundation.framework in Frameworks */,
+				184BA503280121DA0090CC95 /* OpenCL.framework in Frameworks */,
+				184BA501280121D00090CC95 /* Accelerate.framework in Frameworks */,
+				184BA4FF280121C90090CC95 /* QuartzCore.framework in Frameworks */,
+				184BA4FD280121BB0090CC95 /* CoreMedia.framework in Frameworks */,
+				184BA4FB280121B20090CC95 /* CoreImage.framework in Frameworks */,
+				184BA4F9280121A80090CC95 /* CoreGraphics.framework in Frameworks */,
+				184BA4F72801219E0090CC95 /* CoreFoundation.framework in Frameworks */,
+				184BA4F5280121930090CC95 /* Cocoa.framework in Frameworks */,
+				184BA4F32801218A0090CC95 /* AVFoundation.framework in Frameworks */,
+				184BA4F1280121800090CC95 /* AppKit.framework in Frameworks */,
+				184BA4ED28011F710090CC95 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184BA4EF2801217F0090CC95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184BA506280121EF0090CC95 /* CoreVideo.framework */,
+				184BA504280121E50090CC95 /* Foundation.framework */,
+				184BA502280121DA0090CC95 /* OpenCL.framework */,
+				184BA500280121D00090CC95 /* Accelerate.framework */,
+				184BA4FE280121C90090CC95 /* QuartzCore.framework */,
+				184BA4FC280121BA0090CC95 /* CoreMedia.framework */,
+				184BA4FA280121B20090CC95 /* CoreImage.framework */,
+				184BA4F8280121A80090CC95 /* CoreGraphics.framework */,
+				184BA4F62801219E0090CC95 /* CoreFoundation.framework */,
+				184BA4F4280121930090CC95 /* Cocoa.framework */,
+				184BA4F22801218A0090CC95 /* AVFoundation.framework */,
+				184BA4F0280121800090CC95 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		330908711B3D93C40062D279 /* PIDataView */ = {
+			isa = PBXGroup;
+			children = (
+				330908721B3D93F60062D279 /* PIDataViewCtrl.h */,
+				330908731B3D93F60062D279 /* PIDataViewCtrl.m */,
+				330908741B3D93F60062D279 /* PIDataViewCtrl.xib */,
+			);
+			name = PIDataView;
+			sourceTree = "<group>";
+		};
+		330908771B3D94050062D279 /* popupWnd */ = {
+			isa = PBXGroup;
+			children = (
+				330908781B3D94D10062D279 /* ATPopupWindow.h */,
+				330908791B3D94D10062D279 /* ATPopupWindow.m */,
+				3309087B1B3D94E70062D279 /* LRHMPopupBorderView.h */,
+				3309087C1B3D94E70062D279 /* LRHMPopupBorderView.m */,
+			);
+			name = popupWnd;
+			sourceTree = "<group>";
+		};
+		331CEA721B418A7400581952 /* NSImageToCVMat */ = {
+			isa = PBXGroup;
+			children = (
+				331CEA731B418A9400581952 /* NSImage+OpenCV.h */,
+				331CEA741B418A9400581952 /* NSImage+OpenCV.mm */,
+			);
+			name = NSImageToCVMat;
+			sourceTree = "<group>";
+		};
+		332A1C681B442CC4005F4B33 /* PIProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				332A1C691B442CDF005F4B33 /* PIProgressView.h */,
+				332A1C6A1B442CDF005F4B33 /* PIProgressView.m */,
+				332A1C6C1B442EC6005F4B33 /* PIProgressViewCtrl.h */,
+				332A1C6D1B442EC6005F4B33 /* PIProgressViewCtrl.m */,
+				332A1C6F1B442EDD005F4B33 /* PIProgressViewCtrl.xib */,
+			);
+			name = PIProgressView;
+			sourceTree = "<group>";
+		};
+		332A1C741B443B03005F4B33 /* PIRedoUndoMgr */ = {
+			isa = PBXGroup;
+			children = (
+				332A1C751B443B2A005F4B33 /* PIRedoUndoMgr.h */,
+				332A1C761B443B2A005F4B33 /* PIRedoUndoMgr.m */,
+			);
+			name = PIRedoUndoMgr;
+			sourceTree = "<group>";
+		};
+		3368191C1B399C2500069A60 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				332A1C681B442CC4005F4B33 /* PIProgressView */,
+				3368192E1B39A39500069A60 /* bottomView */,
+				336819281B39A31A00069A60 /* contentView */,
+				336819241B39A17400069A60 /* sideBarSuperView */,
+				3368191D1B399C9500069A60 /* LRHMSideBarItem */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		3368191D1B399C9500069A60 /* LRHMSideBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				3368191E1B399CB700069A60 /* LRHMSideBarItem.h */,
+				3368191F1B399CB700069A60 /* LRHMSideBarItem.m */,
+				336819201B399CB700069A60 /* LRHMTitleView.h */,
+				336819211B399CB700069A60 /* LRHMTitleView.m */,
+			);
+			name = LRHMSideBarItem;
+			sourceTree = "<group>";
+		};
+		336819241B39A17400069A60 /* sideBarSuperView */ = {
+			isa = PBXGroup;
+			children = (
+				336819251B39A1CE00069A60 /* LRHMSideBar.h */,
+				336819261B39A1CE00069A60 /* LRHMSideBar.m */,
+			);
+			name = sideBarSuperView;
+			sourceTree = "<group>";
+		};
+		336819281B39A31A00069A60 /* contentView */ = {
+			isa = PBXGroup;
+			children = (
+				336819291B39A32E00069A60 /* PIContentView.h */,
+				3368192A1B39A32E00069A60 /* PIContentView.m */,
+				B481A36F1B43C14400CF74E1 /* PIContentPathView.h */,
+				B481A3701B43C14400CF74E1 /* PIContentPathView.m */,
+			);
+			name = contentView;
+			sourceTree = "<group>";
+		};
+		3368192E1B39A39500069A60 /* bottomView */ = {
+			isa = PBXGroup;
+			children = (
+				3368192F1B39A3AC00069A60 /* PIBottomView.h */,
+				336819301B39A3AC00069A60 /* PIBottomView.m */,
+			);
+			name = bottomView;
+			sourceTree = "<group>";
+		};
+		336819321B39A5BD00069A60 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				334146361B4AC2E200F9DA6C /* photo inpaint.icns */,
+				334146301B4AB22B00F9DA6C /* leadPhoto.png */,
+				334146311B4AB22B00F9DA6C /* meta.png */,
+				334146321B4AB22B00F9DA6C /* start.png */,
+				336819351B39A68E00069A60 /* brush.png */,
+				336819361B39A68E00069A60 /* redo.png */,
+				336819371B39A68E00069A60 /* save.png */,
+				336819381B39A68E00069A60 /* undo.png */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		3368193D1B39B29900069A60 /* dataMgr */ = {
+			isa = PBXGroup;
+			children = (
+				3368193E1B39B2AF00069A60 /* PIImageDataMgr.h */,
+				3368193F1B39B2AF00069A60 /* PIImageDataMgr.m */,
+			);
+			name = dataMgr;
+			sourceTree = "<group>";
+		};
+		339D60771B31BDF800DFBA26 = {
+			isa = PBXGroup;
+			children = (
+				339D60C61B31BFEC00DFBA26 /* opencv lib */,
+				339D60821B31BDF800DFBA26 /* Photo Inpaint */,
+				339D60961B31BDF800DFBA26 /* Photo InpaintTests */,
+				339D60811B31BDF800DFBA26 /* Products */,
+				184BA4EF2801217F0090CC95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		339D60811B31BDF800DFBA26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				339D60801B31BDF800DFBA26 /* Easy photo inpaint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		339D60821B31BDF800DFBA26 /* Photo Inpaint */ = {
+			isa = PBXGroup;
+			children = (
+				3341462C1B4AB07400F9DA6C /* NSButton+TextColor.h */,
+				3341462D1B4AB07400F9DA6C /* NSButton+TextColor.m */,
+				332A1C781B444486005F4B33 /* Photo Inpaint.entitlements */,
+				332A1C741B443B03005F4B33 /* PIRedoUndoMgr */,
+				B4EEEEA01B43EB540008F139 /* output */,
+				B4C271081B423996005BDAEC /* PIInpaint */,
+				B4C271041B422804005BDAEC /* AffineTransform */,
+				331CEA721B418A7400581952 /* NSImageToCVMat */,
+				330908771B3D94050062D279 /* popupWnd */,
+				330908711B3D93C40062D279 /* PIDataView */,
+				3368193D1B39B29900069A60 /* dataMgr */,
+				3368191C1B399C2500069A60 /* CustomView */,
+				339D60AA1B31BF4F00DFBA26 /* criminisi c++ */,
+				339D60851B31BDF800DFBA26 /* AppDelegate.h */,
+				339D60861B31BDF800DFBA26 /* AppDelegate.mm */,
+				339D608A1B31BDF800DFBA26 /* Images.xcassets */,
+				339D608C1B31BDF800DFBA26 /* MainMenu.xib */,
+				339D60831B31BDF800DFBA26 /* Supporting Files */,
+			);
+			path = "Photo Inpaint";
+			sourceTree = "<group>";
+		};
+		339D60831B31BDF800DFBA26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				336819321B39A5BD00069A60 /* resource */,
+				339D60841B31BDF800DFBA26 /* Info.plist */,
+				339D60881B31BDF800DFBA26 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		339D60961B31BDF800DFBA26 /* Photo InpaintTests */ = {
+			isa = PBXGroup;
+			children = (
+				339D60991B31BDF800DFBA26 /* Photo_InpaintTests.m */,
+				339D60971B31BDF800DFBA26 /* Supporting Files */,
+			);
+			path = "Photo InpaintTests";
+			sourceTree = "<group>";
+		};
+		339D60971B31BDF800DFBA26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				339D60981B31BDF800DFBA26 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		339D60AA1B31BF4F00DFBA26 /* criminisi c++ */ = {
+			isa = PBXGroup;
+			children = (
+				339D60AB1B31BF7400DFBA26 /* catch.hpp */,
+				339D60AC1B31BF7400DFBA26 /* criminisi_inpainter.cpp */,
+				339D60AD1B31BF7400DFBA26 /* criminisi_inpainter.h */,
+				339D60AE1B31BF7400DFBA26 /* gradient.h */,
+				339D60B01B31BF7400DFBA26 /* integral.h */,
+				339D60B11B31BF7400DFBA26 /* mean_shift.cpp */,
+				339D60B21B31BF7400DFBA26 /* mean_shift.h */,
+				339D60B41B31BF7400DFBA26 /* patch_match.cpp */,
+				339D60B51B31BF7400DFBA26 /* patch_match.h */,
+				339D60B71B31BF7400DFBA26 /* patch.h */,
+				339D60B81B31BF7400DFBA26 /* pyramid.cpp */,
+				339D60B91B31BF7400DFBA26 /* pyramid.h */,
+				339D60BA1B31BF7400DFBA26 /* stats.h */,
+				339D60BB1B31BF7400DFBA26 /* template_match_candidates.cpp */,
+				339D60BC1B31BF7400DFBA26 /* template_match_candidates.h */,
+				339D60BD1B31BF7400DFBA26 /* timer.h */,
+			);
+			name = "criminisi c++";
+			sourceTree = "<group>";
+		};
+		339D60C61B31BFEC00DFBA26 /* opencv lib */ = {
+			isa = PBXGroup;
+			children = (
+				184BA4EC28011F710090CC95 /* opencv2.framework */,
+			);
+			name = "opencv lib";
+			sourceTree = "<group>";
+		};
+		B4C271041B422804005BDAEC /* AffineTransform */ = {
+			isa = PBXGroup;
+			children = (
+				B4C271051B42283D005BDAEC /* PIAffineTransform.h */,
+				B4C271061B42283D005BDAEC /* PIAffineTransform.m */,
+			);
+			name = AffineTransform;
+			sourceTree = "<group>";
+		};
+		B4C271081B423996005BDAEC /* PIInpaint */ = {
+			isa = PBXGroup;
+			children = (
+				B4C271091B4239FC005BDAEC /* PIInpaint.h */,
+				B4C2710A1B4239FC005BDAEC /* PIInpaint.mm */,
+			);
+			name = PIInpaint;
+			sourceTree = "<group>";
+		};
+		B4EEEEA01B43EB540008F139 /* output */ = {
+			isa = PBXGroup;
+			children = (
+				B4EEEEA11B43EB640008F139 /* PCOutImageFormat.h */,
+				B4EEEEA21B43EB640008F139 /* PCOutImageFormat.m */,
+				B4EEEEA31B43EB640008F139 /* PCOutImageFormat.xib */,
+				B4EEEEA41B43EB640008F139 /* PCOutImageFormatCtrl.h */,
+				B4EEEEA51B43EB640008F139 /* PCOutImageFormatCtrl.m */,
+			);
+			name = output;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		339D607F1B31BDF800DFBA26 /* Photo Inpaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 339D609D1B31BDF800DFBA26 /* Build configuration list for PBXNativeTarget "Photo Inpaint" */;
+			buildPhases = (
+				339D607C1B31BDF800DFBA26 /* Sources */,
+				339D607D1B31BDF800DFBA26 /* Frameworks */,
+				339D607E1B31BDF800DFBA26 /* Resources */,
+				B40C83BA1B42805500AA33DA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Photo Inpaint";
+			productName = "Photo Inpaint";
+			productReference = 339D60801B31BDF800DFBA26 /* Easy photo inpaint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		339D60781B31BDF800DFBA26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = lanruiheimeng;
+				TargetAttributes = {
+					339D607F1B31BDF800DFBA26 = {
+						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					339D60A31B31BE4100DFBA26 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 339D607B1B31BDF800DFBA26 /* Build configuration list for PBXProject "Photo Inpaint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 339D60771B31BDF800DFBA26;
+			productRefGroup = 339D60811B31BDF800DFBA26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				339D607F1B31BDF800DFBA26 /* Photo Inpaint */,
+				339D60A31B31BE4100DFBA26 /* Photo-Inpaint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		339D607E1B31BDF800DFBA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				336819391B39A68E00069A60 /* brush.png in Resources */,
+				3368193A1B39A68E00069A60 /* redo.png in Resources */,
+				3368193B1B39A68E00069A60 /* save.png in Resources */,
+				334146341B4AB22B00F9DA6C /* meta.png in Resources */,
+				332A1C701B442EDD005F4B33 /* PIProgressViewCtrl.xib in Resources */,
+				3368193C1B39A68E00069A60 /* undo.png in Resources */,
+				339D608B1B31BDF800DFBA26 /* Images.xcassets in Resources */,
+				334146371B4AC2E200F9DA6C /* photo inpaint.icns in Resources */,
+				330908761B3D93F60062D279 /* PIDataViewCtrl.xib in Resources */,
+				B4EEEEA71B43EB640008F139 /* PCOutImageFormat.xib in Resources */,
+				334146331B4AB22B00F9DA6C /* leadPhoto.png in Resources */,
+				334146351B4AB22B00F9DA6C /* start.png in Resources */,
+				339D608E1B31BDF800DFBA26 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		339D60A71B31BE6900DFBA26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "IS_APP_STORE=\"FALSE\"\nfor i in $GCC_PREPROCESSOR_DEFINITIONS ; do\nif [ \"$i\" = \"APP_STORE\" ] ; then\nIS_APP_STORE=\"TRUE\"\nbreak\nfi\ndone\n\nif [ \"$IS_APP_STORE\" = \"TRUE\" ] ; then\nproductbuild --component \"$TARGET_BUILD_DIR/$MY_PRODUCT_NAME.app\" /Applications --sign \"$INSTALL_SIGN_IDENTITY\" \"$HOME/Setup/MacAppStore/$MY_PRODUCT_PKG.pkg\"\nhdiutil create -srcfolder \"$TARGET_BUILD_DIR/$MY_PRODUCT_NAME.app/\" -ov \"$HOME/Setup/MacAppStore/$MY_PRODUCT_DMG\"\nelse\nhdiutil create -srcfolder \"$TARGET_BUILD_DIR/$MY_PRODUCT_NAME.app/\" -ov \"$HOME/Setup/DMGApp/$MY_PRODUCT_DMG\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		339D607C1B31BDF800DFBA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3368192B1B39A32E00069A60 /* PIContentView.m in Sources */,
+				336819401B39B2AF00069A60 /* PIImageDataMgr.m in Sources */,
+				B481A3711B43C14400CF74E1 /* PIContentPathView.m in Sources */,
+				330908751B3D93F60062D279 /* PIDataViewCtrl.m in Sources */,
+				336819221B399CB700069A60 /* LRHMSideBarItem.m in Sources */,
+				339D60C01B31BF7400DFBA26 /* mean_shift.cpp in Sources */,
+				339D60891B31BDF800DFBA26 /* main.m in Sources */,
+				339D60871B31BDF800DFBA26 /* AppDelegate.mm in Sources */,
+				B4EEEEA61B43EB640008F139 /* PCOutImageFormat.m in Sources */,
+				3309087D1B3D94E70062D279 /* LRHMPopupBorderView.m in Sources */,
+				332A1C6B1B442CDF005F4B33 /* PIProgressView.m in Sources */,
+				336819231B399CB700069A60 /* LRHMTitleView.m in Sources */,
+				331CEA751B418A9400581952 /* NSImage+OpenCV.mm in Sources */,
+				332A1C6E1B442EC6005F4B33 /* PIProgressViewCtrl.m in Sources */,
+				336819311B39A3AC00069A60 /* PIBottomView.m in Sources */,
+				3341462E1B4AB07400F9DA6C /* NSButton+TextColor.m in Sources */,
+				B4EEEEA81B43EB640008F139 /* PCOutImageFormatCtrl.m in Sources */,
+				3309087A1B3D94D10062D279 /* ATPopupWindow.m in Sources */,
+				339D60C21B31BF7400DFBA26 /* patch_match.cpp in Sources */,
+				B4C2710B1B4239FC005BDAEC /* PIInpaint.mm in Sources */,
+				339D60C51B31BF7400DFBA26 /* template_match_candidates.cpp in Sources */,
+				B4C271071B42283D005BDAEC /* PIAffineTransform.m in Sources */,
+				336819271B39A1CE00069A60 /* LRHMSideBar.m in Sources */,
+				339D60C41B31BF7400DFBA26 /* pyramid.cpp in Sources */,
+				339D60BE1B31BF7400DFBA26 /* criminisi_inpainter.cpp in Sources */,
+				332A1C771B443B2A005F4B33 /* PIRedoUndoMgr.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		339D60A91B31BE7000DFBA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 339D607F1B31BDF800DFBA26 /* Photo Inpaint */;
+			targetProxy = 339D60A81B31BE7000DFBA26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		339D608C1B31BDF800DFBA26 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				339D608D1B31BDF800DFBA26 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		339D609B1B31BDF800DFBA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		339D609C1B31BDF800DFBA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		339D609E1B31BDF800DFBA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "Photo Inpaint/Photo Inpaint.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "Photo Inpaint/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "Easy photo inpaint";
+			};
+			name = Debug;
+		};
+		339D609F1B31BDF800DFBA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "Photo Inpaint/Photo Inpaint.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				INFOPLIST_FILE = "Photo Inpaint/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "Easy photo inpaint";
+			};
+			name = Release;
+		};
+		339D60A51B31BE4100DFBA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_SIGN_IDENTITY = "";
+				MY_PRODUCT_DMG = "Easy photo inpaint";
+				MY_PRODUCT_NAME = "Easy photo inpaint";
+				MY_PRODUCT_PKG = "Easy photo inpaint";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		339D60A61B31BE4100DFBA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
+				INSTALL_SIGN_IDENTITY = "";
+				MY_PRODUCT_DMG = "Easy photo inpaint";
+				MY_PRODUCT_NAME = "Easy photo inpaint";
+				MY_PRODUCT_PKG = "Easy photo inpaint";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		339D607B1B31BDF800DFBA26 /* Build configuration list for PBXProject "Photo Inpaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339D609B1B31BDF800DFBA26 /* Debug */,
+				339D609C1B31BDF800DFBA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		339D609D1B31BDF800DFBA26 /* Build configuration list for PBXNativeTarget "Photo Inpaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339D609E1B31BDF800DFBA26 /* Debug */,
+				339D609F1B31BDF800DFBA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		339D60A41B31BE4100DFBA26 /* Build configuration list for PBXAggregateTarget "Photo-Inpaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				339D60A51B31BE4100DFBA26 /* Debug */,
+				339D60A61B31BE4100DFBA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 339D60781B31BDF800DFBA26 /* Project object */;
+}

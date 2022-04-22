@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="_bottomView" destination="l7e-QZ-84v" id="l1n-iB-rHG"/>
+                <outlet property="_brushBtn" destination="oUZ-YS-1mV" id="bBU-md-ATG"/>
+                <outlet property="_brushView" destination="v9v-MQ-KRf" id="eEO-5P-QMW"/>
+                <outlet property="_checkBtn" destination="slN-c7-NwO" id="AuF-Ae-S8d"/>
+                <outlet property="_contentPathView" destination="JFf-Tv-gQ4" id="wZC-G4-ywo"/>
+                <outlet property="_contentView" destination="ug3-48-lN2" id="NiX-LP-ysf"/>
+                <outlet property="_sideBar" destination="XhH-vU-sub" id="r4e-Ih-oNK"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="Photo Inpaint" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Photo Inpaint" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About Easy photo inpaint" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                            <menuItem title="Services" id="NMo-om-nkz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide Easy photo inpaint" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Kd2-mp-pUS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit Easy photo inpaint" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="dMs-cI-mzQ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="File" id="bib-Uj-vzu">
+                        <items>
+                            <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
+                                <connections>
+                                    <action selector="openFile:" target="Voe-Tx-rLC" id="jUo-PJ-88u"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Recent" id="tXI-mr-wws">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="vNY-rz-j42">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="Daa-9d-B3U"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
+                            <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="HmO-Ls-i7Q"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save…" keyEquivalent="s" id="pxx-59-PXV">
+                                <connections>
+                                    <action selector="savePhoto:" target="Voe-Tx-rLC" id="WS6-Ju-u3Y"/>
+                                    <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isEnableStartAndMetaDataBtn" id="Zz9-GE-ECK"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="aUF-d1-5bR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="DIl-cC-cCs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                            <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Easy photo inpaint" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="263" y="137" width="935" height="683"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="-1" width="935" height="683"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="ug3-48-lN2" customClass="PIContentView">
+                        <rect key="frame" x="0.0" y="31" width="941" height="652"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView id="XhH-vU-sub">
+                                <rect key="frame" x="14" y="359" width="100" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button identifier="BrushTool" id="oUZ-YS-1mV">
+                                        <rect key="frame" x="9" y="173" width="84" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" title="Brush" bezelStyle="shadowlessSquare" image="brush" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="qR4-BO-jXk">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">z</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toolBarAction:" target="Voe-Tx-rLC" id="nrj-tF-1Hj"/>
+                                            <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isEnableStartAndMetaDataBtn" id="t97-tE-sUm"/>
+                                        </connections>
+                                    </button>
+                                    <button identifier="StartInpaint" id="AKw-jF-Wmo">
+                                        <rect key="frame" x="9" y="225" width="84" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="start" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Q0q-sD-y5E">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toolBarAction:" target="Voe-Tx-rLC" id="9tn-YR-Q8d"/>
+                                            <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isEnableStartAndMetaDataBtn" id="iU5-2z-pc6"/>
+                                        </connections>
+                                    </button>
+                                    <button identifier="Save" id="E1t-8Q-cUj">
+                                        <rect key="frame" x="9" y="12" width="81" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="save" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="uyq-YU-5WL">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">s</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toolBarAction:" target="Voe-Tx-rLC" id="ASt-0k-Wzt"/>
+                                            <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isEnableStartAndMetaDataBtn" id="vNd-YR-3A4"/>
+                                        </connections>
+                                    </button>
+                                    <button identifier="Undo" id="agn-k8-Gre">
+                                        <rect key="frame" x="9" y="120" width="84" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" title="Undo" bezelStyle="shadowlessSquare" image="undo" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ouo-aC-jRO">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">z</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toolBarAction:" target="Voe-Tx-rLC" id="ANh-Dt-czR"/>
+                                            <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isCanUndo" id="l7g-4S-cP2"/>
+                                        </connections>
+                                    </button>
+                                    <button identifier="Redo" id="hFl-b0-oRJ">
+                                        <rect key="frame" x="9" y="64" width="84" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="redo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="BpW-66-1ga">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">Z</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toolBarAction:" target="Voe-Tx-rLC" id="WDm-Ms-l8a"/>
+                                            <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isCanRedo" id="1uZ-4e-bEL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <connections>
+                                    <binding destination="Voe-Tx-rLC" name="hidden" keyPath="self.isHideToolBar" id="lwz-uw-P3k"/>
+                                    <outlet property="delegate" destination="Voe-Tx-rLC" id="ZjB-UU-21u"/>
+                                </connections>
+                            </customView>
+                        </subviews>
+                        <connections>
+                            <outlet property="datasource" destination="Voe-Tx-rLC" id="ZA8-Q0-kBJ"/>
+                            <outlet property="delegate" destination="Voe-Tx-rLC" id="cZu-Uz-olH"/>
+                        </connections>
+                    </customView>
+                    <customView id="l7e-QZ-84v" customClass="PIBottomView">
+                        <rect key="frame" x="0.0" y="0.0" width="935" height="32"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button identifier="showMetadata" id="63Y-GK-qrE">
+                                <rect key="frame" x="832" y="4" width="79" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" title="metaData" bezelStyle="shadowlessSquare" image="meta" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Egj-b8-2cG">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showImageMetaData:" target="Voe-Tx-rLC" id="zb1-d9-30U"/>
+                                    <binding destination="Voe-Tx-rLC" name="enabled" keyPath="self.isEnableStartAndMetaDataBtn" id="EFI-Mq-wxy"/>
+                                </connections>
+                            </button>
+                            <button id="slN-c7-NwO">
+                                <rect key="frame" x="18" y="7" width="98" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="HideToolBar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5wE-0F-t28">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="hideToolBarAction:" target="Voe-Tx-rLC" id="T9p-9c-v7H"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="469.5" y="297.5"/>
+        </window>
+        <customView id="v9v-MQ-KRf" customClass="LRHMSideBar">
+            <rect key="frame" x="0.0" y="1" width="232" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="Brush" borderType="line" id="q3S-3t-kav">
+                    <rect key="frame" x="4" y="8" width="224" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="222" height="71"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="sYs-lT-Guc">
+                                <rect key="frame" x="25" y="43" width="174" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <size key="cellSize" width="84" height="18"/>
+                                <size key="intercellSpacing" width="4" height="2"/>
+                                <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="cET-YS-Cus">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <cells>
+                                    <column>
+                                        <buttonCell type="radio" title="Circle" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="UKB-6O-DpL">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </column>
+                                    <column>
+                                        <buttonCell type="radio" title="Rectangle" imagePosition="left" alignment="left" inset="2" id="NvY-6l-TRn">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </column>
+                                </cells>
+                                <connections>
+                                    <binding destination="Voe-Tx-rLC" name="selectedIndex" keyPath="self.brushType" id="a6s-VW-j3X"/>
+                                </connections>
+                            </matrix>
+                            <slider verticalHuggingPriority="750" id="m34-yz-wWd">
+                                <rect key="frame" x="54" y="17" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <sliderCell key="cell" state="on" alignment="left" minValue="5" maxValue="20" doubleValue="10" tickMarkPosition="above" sliderType="linear" id="7a0-xl-C9g"/>
+                                <connections>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="self.radius" id="Xac-sw-5d5"/>
+                                </connections>
+                            </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xgt-CT-JxN">
+                                <rect key="frame" x="170" y="20" width="25" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10" id="Ozk-Hc-Ras">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="Voe-Tx-rLC" name="value" keyPath="self.brushSizeStr" id="bIS-fM-Sao"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iUx-2q-q1p">
+                                <rect key="frame" x="16" y="20" width="34" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Size:" id="nFA-It-BVr">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+            <point key="canvasLocation" x="362" y="406.5"/>
+        </customView>
+        <customView id="JFf-Tv-gQ4" customClass="PIContentPathView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <point key="canvasLocation" x="519.5" y="763"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="Arn-Ep-6yT"/>
+    </objects>
+    <resources>
+        <image name="brush" width="85" height="39"/>
+        <image name="meta" width="79" height="24"/>
+        <image name="redo" width="85" height="39"/>
+        <image name="save" width="84" height="41"/>
+        <image name="start" width="84" height="41"/>
+        <image name="undo" width="85" height="39"/>
+    </resources>
+</document>
