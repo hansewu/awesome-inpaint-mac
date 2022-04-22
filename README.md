@@ -2,7 +2,7 @@
  Traditional inpainting algorithms C++ test
 
 
-Please note: unzip awesome-inpaint-mac/opencv2.framework/Versions/A/opencv2.zip first. (For GitHub can only upload a file less than 1M)
+Please note: unzip awesome-inpaint-mac/opencv2.framework/Versions/A/opencv2.zip first. (For GitHub can only upload a file less than 100M)
 
 1 Opencv INPAINT_TELEA, INPAINT_NS inpainting algorithm
 
